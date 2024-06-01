@@ -5,20 +5,30 @@
   left: 0;
   width: 100%;
   height: 50px; 
-  background-color: #007bff;
+  background-color: #0d0d0e;
   text-align: center;
   color: white;
 }
 
 .navbar-custom {
-  background-color: #007bff; /* Elige el color azul deseado */
+  background-color: #0d0d0e; /* Elige el color deseado */
 }
 
 .container-scroll {
   max-height: 500px; /* Ajusta la altura según tus necesidades */
   overflow-y: auto;
   padding: 15px; /* Opcional: añade un poco de padding */
-  background-color: #f8f9fa; /* Opcional: color de fondo */
+  background-color: #123f6b; /* Opcional: color de fondo */
   border: 1px solid #ddd; /* Opcional: borde */
   border-radius: 4px; /* Opcional: esquinas redondeadas */
 }
+
+.btn-rounded {
+  border-radius: 15px;
+}
+
+.table-custom {
+  font-family: Arial, sans-serif;
+  background-color: #27c5c6;
+}
+

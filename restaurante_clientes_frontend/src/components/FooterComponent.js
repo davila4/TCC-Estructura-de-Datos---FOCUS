@@ -5,7 +5,7 @@ export const FooterComponent = () => {
         <div>
             <footer className="footer">
                 <span style={{ fontFamily: "Cambria, serif", fontStyle: "italic", fontSize: "28px", color: "white" }}>
-                    Sistema desarrollado por EL Cipa Focus
+                    Sistema desarrollado por El Cipa Focus
                 </span>
             </footer>
         </div>

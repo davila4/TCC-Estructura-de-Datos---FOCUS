@@ -12,7 +12,7 @@ const AddClienteComponent = () => {
     const navigate = useNavigate();
     const { id } = useParams();
 
-    const saveOrUpdatCliente = (e) => {
+    const saveOrUpdateCliente = (e) => {
         e.preventDefault();
         const cliente = { dni, nombre, apellido, telefono, direccion, email };
 
@@ -50,24 +50,18 @@ const AddClienteComponent = () => {
         }
     }, [id]);
 
-    const title = () => {
-        if (id) {
-            return <h2 className="text-center">Actualizar cliente</h2>;
-        } else {
-            return <h2 className="text-center" style={{ fontFamily: "Cambria, serif", fontStyle: "italic", fontSize: "30px", color: "black" }}>Agregar cliente</h2>;
-        }
-    };
+    const title = id ? "Actualizar cliente" : "Agregar cliente";
 
     return (
-        <div className="container-scroll">
+        <div className="container-scroll" style={{ backgroundImage: "url('/Pure-Animated-Background.gif')", padding: "5px", overflowX: "hidden", border: "none" }}>
             <div className="row">
                 <div className="col-md-6 offset-md-3">
-                    <h2 className="text-center mb-4">{title()}</h2>
-                    <div className="card">
+                    <h2 className="text-center mb-4" style={{ fontWeight: "bold", fontFamily: "Cambria, serif", fontStyle: "italic", fontSize: "30px", color: "white" }}>{title}</h2>
+                    <div className="card" style={{ backgroundColor: "lightgray" }}>
                         <div className="card-body">
-                            <form onSubmit={saveOrUpdatCliente}>
+                            <form onSubmit={saveOrUpdateCliente}>
                                 <div className="form-group">
-                                    <label className="form-label">Dni</label>
+                                    <label className="form-label font-weight-bold">Dni</label>
                                     <input
                                         type="text"
                                         placeholder="Digite su dni"
@@ -78,7 +72,7 @@ const AddClienteComponent = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Nombre</label>
+                                    <label className="form-label font-weight-bold">Nombre</label>
                                     <input
                                         type="text"
                                         placeholder="Digite su nombre"
@@ -89,7 +83,7 @@ const AddClienteComponent = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Apellido</label>
+                                    <label className="form-label font-weight-bold">Apellido</label>
                                     <input
                                         type="text"
                                         placeholder="Digite su apellido"
@@ -100,7 +94,7 @@ const AddClienteComponent = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Telefono</label>
+                                    <label className="form-label font-weight-bold">Telefono</label>
                                     <input
                                         type="text"
                                         placeholder="Digite su número de teléfono"
@@ -111,7 +105,7 @@ const AddClienteComponent = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Dirección</label>
+                                    <label className="form-label font-weight-bold">Dirección</label>
                                     <input
                                         type="text"
                                         placeholder="Digite su dirección"
@@ -122,7 +116,7 @@ const AddClienteComponent = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <label className="form-label">Email</label>
+                                    <label className="form-label font-weight-bold">Email</label>
                                     <input
                                         type="text"
                                         placeholder="Digite su email"
@@ -133,7 +127,7 @@ const AddClienteComponent = () => {
                                     />
                                 </div>
                                 <div className="form-group">
-                                    <button className="btn btn-success" onClick={saveOrUpdatCliente}>Guardar</button>
+                                    <button className="btn btn-success" type="submit">Guardar</button>
                                     &nbsp;&nbsp;
                                     <Link to="/clients" className="btn btn-danger">Cancelar</Link>
                                 </div>
